@@ -1,0 +1,38 @@
+---
+title: 01 Lorem Ipsum
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+date: 2021-12-24
+---
+
+Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum
+consequat enim id excepteur consequat nostrud esse esse fugiat dolore.
+Reprehenderit occaecat exercitation non cupidatat in eiusmod laborum ex eu
+fugiat aute culpa pariatur. Irure elit proident consequat veniam minim ipsum ex
+pariatur.
+
+## Esto es un H2
+
+```tsx
+const Posts = () => {
+	return (
+		<div>
+			<h1 className="text-center my-4 text-3xl">Postss</h1>
+			<div className="grid gap-4">
+				{posts.map((post) => (
+					<article key={post._id}>
+						<h2 className="text-2xl">
+							<Link href={post.url}>{post.title}</Link>
+						</h2>
+						<time>
+							{new Date(post.date).toLocaleDateString("es-ES", {
+								year: "numeric",
+								month: "long",
+								day: "numeric",
+							})}
+						</time>
+					</article>
+				))}
+			</div>
+		</div>
+	);
+```
